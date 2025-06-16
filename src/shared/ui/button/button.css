@@ -1,0 +1,68 @@
+.btn-opacity {
+    width: max-content;
+    font-family: Inter-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 57px;
+    border: 1px solid #FFF;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #FFFFFF;
+    background: content-box;
+    cursor: pointer;
+}
+
+.btn-opacity:hover {
+    background: #FFFFFF;
+    color: #000000;
+}
+
+
+
+.btn-regular {
+    width: max-content;
+    font-family: Inter-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 57px;
+    border: 1px solid #FFFFFF;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #000000;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+.btn-regular:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: #000000;
+}
+
+.btn-underline {
+    width: max-content;
+    font-family: Inter-Regular, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border: none;
+    border-bottom: 1px solid #000000;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #000000;
+    background: none;
+    cursor: pointer;
+}

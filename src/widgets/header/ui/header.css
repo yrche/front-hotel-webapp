@@ -1,0 +1,53 @@
+.headerMenu {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.headerMenu .navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    padding: 12px 20px 12px 20px;
+    border-bottom: rgba(255, 255, 255, 0.15) 1px solid;
+    opacity: 1;
+    transition: opacity .6s cubic-bezier(0.79, 0.19, 0, 1);
+    will-change: opacity;
+}
+
+.headerMenu .navContainer .left-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    column-gap: 2rem;
+    width: fit-content;
+}
+
+.headerMenu .navContainer .linkGroup {
+    flex-direction: row;
+    column-gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+.login-link:has(.nav-link:hover) .nav-link:hover {
+    opacity: 1;
+}
+
+.linkGroup:has(.nav-link:hover) .nav-link:hover {
+    opacity: 1;
+}

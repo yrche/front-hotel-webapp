@@ -1,0 +1,9 @@
+.menu_container {
+    transform: translate(25%, 5%);
+    position: absolute;
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}

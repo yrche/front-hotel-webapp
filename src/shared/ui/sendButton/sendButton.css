@@ -1,0 +1,154 @@
+.btn-send-cont {
+    position: relative;
+    text-decoration: none;
+    display: inline-flex;
+}
+
+.btn-send-cont .btn-send {
+    padding: 7px 7px 7px 7px;
+    width: fit-content;
+    height: 36px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #204CE9;
+    filter: brightness(1);
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, .8) inset, 0 4px 4px 0 #000, 0 2px 2.1px 0 #5076FF inset;
+    cursor: pointer;
+    transition: transform .2s ease-in-out, filter .2s ease-in-out;
+    will-change: transform, filter;
+}
+
+.btn-send-cont .btn-send::before{
+    content: 'Done!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--accent-primary);
+    font-family: Sora, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    background: var(--accent-black);
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, .8) inset, 0 4px 4px 0 #000, 0 2px 2.1px 0 #222 inset;
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+
+}
+
+.btn-send-cont .btn-send span {
+    color: var(--accent-primary);
+    font-family: Sora, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.btn-send-cont .btn-send .send-button {
+    position: relative;
+    right: 0;
+    margin-right: 5px;
+    width: 24px;
+    height: 24px;
+    fill: transparent;
+}
+
+.btn-send-cont .btn-send:hover {
+    filter: brightness(70%);
+}
+
+.btn-send-cont .btn-send:active {
+    transform: scale(.95);
+
+}
+
+.btn-send-cont .btn-send.active {
+    animation: color-changing 1.6s cubic-bezier(.79,-0.29,.3,1.28);
+    animation-delay: .625s;
+}
+
+.btn-send-cont .btn-send.active .send-button {
+    animation: send-message 2.5s cubic-bezier(1,-0.24,.24,.93);
+}
+
+.btn-send-cont .btn-send.active::before{
+    animation: text-animation 1.6s cubic-bezier(.79,-0.29,.3,1.28);
+    animation-delay: .625s;
+
+}
+
+@keyframes send-message {
+    0%, 5%{
+        transform: rotate(0deg);
+        left: 0;
+        z-index: 1;
+    }
+    15%{
+        transform: rotate(45deg);
+        left: 0;
+        z-index: 1;
+    }
+    25%{
+        transform: rotate(45deg);
+        left: -15px;
+        z-index: 1;
+    }
+    50%{
+        transform: rotate(45deg);
+        left: calc(100% + 24px);
+        z-index: 1;
+    }
+    60%{
+        transform: rotate(45deg);
+        left: calc(100% + 24px);
+        z-index: -1;
+    }
+    70%{
+        transform: rotate(45deg);
+        left: -24px;
+        z-index: -1;
+    }
+    80%{
+        transform: rotate(45deg);
+        left: 0;
+        z-index: 1;
+    }
+}
+
+@keyframes text-animation {
+    0%{
+        width: 0;
+        left: 0;
+    }
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: calc(100%/2);
+    }
+}
+
+@keyframes color-changing {
+    0%, 10%{
+        background: #204CE9;
+        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, .8) inset, 0 4px 4px 0 #000, 0 2px 2px 0 #5076FF inset;
+
+    }
+    50%{
+        background: var(--accent-black);
+        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, .8) inset, 0 4px 4px 0 #000, 0 2px 2px 0 #222 inset;
+    }
+    70%{
+        background: #204CE9;
+        box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, .8) inset, 0 4px 4px 0 #000, 0 2px 2px 0 #5076FF inset;
+    }
+}

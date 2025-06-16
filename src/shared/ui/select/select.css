@@ -1,0 +1,96 @@
+.main_container {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0 10px 0;
+}
+
+.main_container .wrap_container {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.main_container .wrap_container .icon_field {
+    display: flex;
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+
+.text_heading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max-content;
+    font-family: Inter-Medium, sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.text_selector {
+    width: 100px;
+    font-family: Inter-Light, sans-serif;
+    font-size: 16px;
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    padding: 0;
+}
+
+.icon_selector {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: #FFFFFF;
+}
+
+.mainContainer .wrap_container .text_field {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+}
+
+
+.arrow_down {
+    width: fit-content;
+    height: fit-content;
+}
+.drop_down {
+    top: 110%;
+    width: 300px;
+    height: 250px;
+    position: absolute;
+    visibility: hidden;
+}
+
+.dropShow {
+    visibility: visible;
+}
+
+.rotate {
+    rotate: 180deg;
+    transition: .2s rotate;
+}
+
+.rotate:focus {
+    rotate: 0deg;
+}
+
+.normal {
+    rotate: 0deg;
+    transition: .1s rotate;
+}
+
+.normal:focus {
+    rotate: 180deg;
+}

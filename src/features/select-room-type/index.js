@@ -1,0 +1,1 @@
+export { RoomType } from './ui/roomType.jsx';

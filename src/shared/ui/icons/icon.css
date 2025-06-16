@@ -1,0 +1,34 @@
+/* View boxes */
+.icon-regular {
+    width: fit-content;
+    height: fit-content;
+}
+
+.icon-round {
+    display: flex;
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 30px;
+    width: fit-content;
+    height: fit-content;
+    padding: 5px;
+}
+/* Styles */
+.bold {
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.outline {
+    fill: none;
+    stroke: #FFFFFF;
+}
+/* Sizes */
+.icon-xs {
+    width: 13px;
+    height: 13px;
+}
+
+.icon-s {
+    width: 20px;
+    height: 20px
+}
+

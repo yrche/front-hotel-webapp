@@ -1,0 +1,39 @@
+.wrapper-mask {
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    border-radius: 16px;
+    background: transparent;
+    z-index: 0;
+}
+
+.wrapper-mask .bookingPanel {
+    padding: 0 10px 0 10px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10), 0 5px 10px 0 rgba(0, 0, 0, 0.10), 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.bookingPanel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    backdrop-filter: blur(40px);
+    z-index: -1;
+    border-radius: 35px;
+}
+
+.selectorGroup {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}

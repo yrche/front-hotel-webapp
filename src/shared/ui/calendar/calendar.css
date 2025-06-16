@@ -1,0 +1,107 @@
+.calendar_container {
+    width: fit-content;
+    height: fit-content;
+    background: rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(40px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10), 0 5px 10px 0 rgba(0, 0, 0, 0.10), 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    padding-bottom: 15px;
+}
+
+.top_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    border-bottom: rgba(255, 255, 255, 0.15);
+    border-width: 1px;
+    border-bottom-style: solid;
+}
+
+.month_container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Sora, sans-serif;
+    font-size: 16px;
+}
+
+.buttons_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.to_left {
+    rotate: 90deg;
+}
+
+.to_right {
+    rotate: 270deg;
+}
+
+.week_container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 6px 40px 6px 40px;
+}
+
+.week {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    color: rgba(255, 255, 255, 0.25);
+    font-family: Sora, sans-serif;
+    font-size: 14px;
+}
+
+.days_container {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 0 40px 0 40px;
+}
+
+.day {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 2px;
+    background: none;
+    border-radius: 2px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Sora, sans-serif;
+    font-size: 14px;
+    transition: background .1s linear;
+}
+
+.day:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.prev_month_day {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.next_month_day {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.current_day {
+    color: #FFFFFF;
+}
+
+.selected_day {
+    color: #0A0A0A;
+}

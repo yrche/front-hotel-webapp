@@ -1,0 +1,39 @@
+.menu_wrapper {
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.menu {
+    padding: 10px 0 10px;
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: rgba(255, 255, 255, 0.16);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.10), 0 5px 10px 0 rgba(0, 0, 0, 0.10), 0 15px 30px 0 rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(40px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.nameType {
+    padding: 4px 40px 4px 10px;
+    width: 100%;
+    font-family: Inter-Light, sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color .2s;
+    cursor: pointer;
+}
+
+.nameType:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
