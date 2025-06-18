@@ -1,0 +1,64 @@
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px
+}
+
+.icon-wrapper {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    padding: 14px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 14px;
+    border: 1px solid #FFF;
+    background: linear-gradient(225deg, rgba(255, 255, 255, 0.00) 0.48%, rgba(0, 0, 0, 0.14) 100.48%), #FFF;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.01), 0 5px 10px 0 rgba(0, 0, 0, 0.01), 0 15px 30px 0 rgba(0, 0, 0, 0.11);
+}
+
+.text-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.text-main {
+    font-family: Inter-Medium, sans-serif;
+    font-size: 20px;
+    color: #0A0A0A;
+}
+
+.text-second {
+    font-family: Inter-Medium, sans-serif;
+    font-size: 14px;
+    color: rgba(10, 10, 10, 0.5);
+}
+
+.text-third {
+    font-family: Inter-Medium, sans-serif;
+    font-size: 14px;
+    color: #0A0A0A;
+}
+
+.text-cont {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.navigate {
+    text-decoration: none;
+}

@@ -1,0 +1,21 @@
+.error-container {
+    top: 5%;
+    display: flex;
+    padding: 15px;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 6px;
+    background: #F7D8D6;
+    position: absolute;
+}
+
+.error {
+    color: #CA0323;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

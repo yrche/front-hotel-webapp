@@ -1,14 +1,13 @@
 import React from 'react';
 import './theme_2.css';
-import sprite from '/sprite.svg';
 
-export const TextLink = ({ name }) => {
+export const TextLink = ({ name, onClick }) => {
     return (
         <li>
-            <a href={''} className={`nav-link`} aria-label={name}>
+            <button className={`nav-link`} aria-label={name} onClick={onClick}>
 
                 <span>{name}</span>
-            </a>
+            </button>
         </li>
     );
 };

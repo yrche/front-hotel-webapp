@@ -1,16 +1,26 @@
-import React from 'react';
-import {Home} from "../pages/home/index.js";
-import {Login} from "../pages/login/index.js";
-import {LoginForm} from "../features/login/index.js";
+import {useEffect, useRef} from "react";
+import { useDispatch } from "react-redux";
+import { refresh } from "../shared/model/index.js";
 
+export const App = ({ children }) => {
+    const dispatch = useDispatch();
+    const hasRefreshed = useRef(false);
 
+    useEffect(() => {
+        if (hasRefreshed.current) return;
+        hasRefreshed.current = true;
 
-const App = () => {
-    return (
-        <div className={'container'}>
-            <LoginForm/>
-        </div>
-    );
+        if (localStorage.getItem("token")) {
+            dispatch(refresh())
+                .unwrap()
+                .then((data) => {
+                    localStorage.setItem("token", data.accessToken);
+                })
+        }
+    }, []);
+
+    return children;
 };
+
 
 export default App;

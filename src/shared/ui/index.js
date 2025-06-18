@@ -7,3 +7,5 @@ export { Divider } from './divider/divider.jsx';
 export { Icon } from './icons/icon.jsx';
 export { MenuList } from './menuList/menuList.jsx';
 export { Calendar } from './calendar/calendar.jsx';
+export { FormLogin } from './form/formLogin.jsx';
+export { ErrorAuth } from './error/error.jsx';

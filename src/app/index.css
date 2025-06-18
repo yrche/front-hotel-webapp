@@ -67,3 +67,14 @@
   src: url("../shared/assets/fonts/Inter-SemiBold.ttf");
   font-display: auto;
 }
+
+@font-face {
+  font-family: 'Sora-Bold';
+  src: url("../shared/assets/fonts/Sora-Bold.ttf");
+  font-display: auto;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}

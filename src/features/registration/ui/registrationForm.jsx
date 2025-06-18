@@ -1,20 +1,28 @@
 import React, {useState} from "react";
-import './loginForm.css';
+import './registrationForm.css';
 import {useDispatch, useSelector} from "react-redux";
-import {login} from "../../../shared/model/index.js";
-import {clearError} from "../../../shared/model/reducer/auth.js";
+import {registration} from "../../../shared/model/index.js";
+import {clearError} from "../../../shared/model/index.js";
 import {Button, ErrorAuth} from "../../../shared/ui/index.js";
 import {Validation} from "../../../shared/lib/validation/validation.jsx";
 import {useNavigate} from "react-router-dom";
 
-export const LoginForm = () => {
+export const RegistrationForm = () => {
     const dispatch = useDispatch();
     const auth = useSelector((state) => state.auth)
     let navigate = useNavigate();
+    const [user_name, setUser_name] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [disableUserName, setDisableUserName] = useState(true);
     const [disableEmail, setDisableEmail] = useState(true);
     const [disablePassword, setDisablePassword] = useState(true);
+
+    const updateUserName = (e) => {
+        dispatch(clearError());
+        const user_name = e.target.value;
+        setUser_name(user_name)
+    }
 
     const updateEmail = (e) => {
         dispatch(clearError());
@@ -28,9 +36,9 @@ export const LoginForm = () => {
         setPassword(password);
     }
 
-    const signIn = (e) => {
+    const signup = (e) => {
         e.preventDefault();
-        dispatch(login({email, password}))
+        dispatch(registration({user_name, email, password}))
             .unwrap()
             .then((user) => {
                 localStorage.setItem('token', user.accessToken);
@@ -44,6 +52,13 @@ export const LoginForm = () => {
                 <ErrorAuth message={auth.error}/>
             )}
             <div className={'form-wrapper'}>
+                <Validation type={"username"} placeHolder={"Your name"} onChange={updateUserName} value={user_name} onValidate={(isValid) => {
+                    if (isValid) {
+                        setDisableUserName(false)
+                    } else {
+                        setDisableUserName(true)
+                    }
+                }}/>
                 <Validation type={"email"} placeHolder={"Your email"} onChange={updateEmail} value={email} onValidate={(isValid) => {
                     if (isValid) {
                         setDisableEmail(false)
@@ -59,8 +74,8 @@ export const LoginForm = () => {
                     }
                 }}/>
             </div>
-            <div className={'button-wrapper'} onClick={signIn}>
-                <Button buttonType={'bold'} text={'Sign in'} disabled={disableEmail || disablePassword}/>
+            <div className={'button-wrapper'} onClick={signup}>
+                <Button buttonType={'bold'} text={'Sign in'} disabled={disableEmail || disablePassword || disableUserName}/>
             </div>
         </div>
     )

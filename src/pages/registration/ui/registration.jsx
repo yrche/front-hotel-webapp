@@ -1,16 +1,16 @@
 import React from "react";
-import './login.css';
-import {LoginWidget} from "../../../widgets/login/index.js";
+import './registration.css';
+import {RegistrationWidget} from "../../../widgets/registraton/index.js";
 
-export const Login = () => {
+export const Registration = () => {
     return (
         <div className={'login-page-container'}>
             <div className={'mask'}>
+                <div className={'login-container registration-container'}>
+                    <RegistrationWidget/>
+                </div>
                 <div className={'logo-wrapper'}>
                     <img src={'../../../../public/Logo.png'} alt={''}></img>
-                </div>
-                <div className={'login-container'}>
-                    <LoginWidget/>
                 </div>
             </div>
         </div>

@@ -1,1 +1,0 @@
-export { $apiAuth } from './instance/axiosInstance.js';

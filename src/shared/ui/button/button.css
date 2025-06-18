@@ -48,6 +48,25 @@
     color: #000000;
 }
 
+.btn-regular-black {
+    display: flex;
+    padding: 10px 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 25px;
+    background: #000;
+    color: #FFF;
+    font-family: Inter-Regular, sans-serif;
+    font-size: 20px;
+    transition: opacity, .2s ease;
+    border-style: none;
+}
+
+.btn-regular-black:hover {
+    opacity: .6;
+}
+
 .btn-underline {
     width: max-content;
     font-family: Inter-Regular, sans-serif;
@@ -65,4 +84,31 @@
     color: #000000;
     background: none;
     cursor: pointer;
+}
+
+.btn-cont {
+    width: 100%;
+}
+
+.btn-bold {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: #000;
+    color: #FFF;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 10px;
+}
+
+.disabled {
+    cursor: not-allowed;
+}
+
+.btn:disabled {
+    opacity: .6;
 }
